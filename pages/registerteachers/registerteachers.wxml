@@ -1,0 +1,18 @@
+<!--pages/registerteachers/registerteachers.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <image class="avatar" src='{{userInfo.avatarUrl}}'></image>
+    <text class="nickname">{{userInfo.nickName}}</text>
+    <text>\n</text>
+    <text class="registerteachertip">请输入您的注册信息(教师):</text>
+    <text>\n</text>
+    <input class="teacherid" bindinput='teacheridinput' placeholder="请输入编号" />
+    <text>\n</text>
+    <input class="teachername" bindinput='teachernameinput' placeholder="请输入姓名" />
+    <text>\n</text>
+    <input class="subject" bindinput='teachersubjectinput' placeholder="请输入教学科目" />
+  </view>
+    <button class="registerteachersubmit" bindtap='registerteachersubmit'>提 交</button>
+    <text>\n</text>
+    <button class="registerteacherreturn" bindtap='registerteacherreturn'>返 回</button>
+</view>

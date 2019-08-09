@@ -1,0 +1,43 @@
+<!--pages/CreateCourse/CreateCourse.wxml-->
+<view class="container">
+  <view class="CourseMessage">
+    <text class="CreateCourseTip">创建课程</text>
+    <text class="kong">\n</text>
+    <input class="courseid" bindinput='courseidinput' placeholder="请设置课程编号" />
+    <text class="kong">\n</text>
+    <input class="coursename" bindinput='coursenameinput' placeholder="请设置课程名称" />
+    <text class="kong">\n</text>
+    <input class="courseplace" bindinput='courseplaceinput' placeholder="请设置上课地点" />
+    <text class="kong">\n</text>
+    <button class="getlocation" bindtap="getlocation">点击获取位置信息</button>
+    <text class="kong">\n</text>
+    <text class="timetip">请设置上课时间：</text>
+    <text class="kong">\n</text>
+    <Select prop-array='{{selectArray}}' bind:myget='getDate'></Select>
+  </view>
+  <view class="coursestarttime">
+    <text class="start">开始: </text>
+    <input class="coursestarthour" maxlength="2" bindinput="coursestarthourinput"/>
+    <text class="starthourtip">时</text>
+    <input class="coursestartminute" maxlength="2" bindinput="coursestartminuteinput"/>
+    <text class="startminutetip">分</text>
+    <input class="coursestartsecond" maxlength="2" bindinput="coursestartsecondinput"/>
+    <text class="startsecondtip">秒</text>
+  </view>
+
+  <view class="courseovertime">
+    <text class="over">结束: </text>
+    <input class="courseoverhour" maxlength="2" bindinput="courseoverhourinput"/>
+    <text class="overhourtip">时</text>
+    <input class="courseoverminute" maxlength="2" bindinput="courseoverminuteinput"/>
+    <text class="overminutetip">分</text>
+    <input class="courseoversecond" maxlength="2" bindinput="courseoversecondinput"/>
+    <text class="oversecondtip">秒</text>
+  </view>
+  <text class="timeformat">(格式:23时59分59秒;09时00分00秒)</text>
+  <view class="buttons">
+    <button class="create" bindtap="create">创 建</button>
+    <button class="return" bindtap="Return">返 回</button>
+  </view>
+
+</view>

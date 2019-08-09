@@ -1,0 +1,15 @@
+<!--pages/registers/registers.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <image class="avatar" src='{{userInfo.avatarUrl}}'></image>
+    <text class="nickname">{{userInfo.nickName}}</text>
+    <text>\n</text>
+    <text class="usercategory">请选择您要注册的用户类别:</text>
+    <text>\n</text>
+    <button class="registeradmin">管 理 员</button>
+    <text>\n</text>
+    <button class="registerteacher" bindtap='registerteacher'>教 师</button>
+    <text>\n</text>
+    <button class="registerstudent" bindtap='registerstudent'>学 生</button>
+  </view>
+</view>

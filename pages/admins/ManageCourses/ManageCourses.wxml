@@ -1,0 +1,12 @@
+<!--pages/admins/ManageCourses/ManageCourses.wxml-->
+<view class="container">
+  <view class="ManageCourse">
+   <image style="width: 90px; height: 90px" class="CoursePhoto" src='/image/class.jpg'></image>
+    <text>\n</text>
+    <text>\n</text>
+    <button class="CreateCourse" bindtap="CreateCourse">创建课程</button>
+    <text>\n</text>
+    <button class="DeleteCourse" bindtap="DeleteCourse">删除课程</button>
+  </view>
+</view>
+

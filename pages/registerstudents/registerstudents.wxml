@@ -1,0 +1,19 @@
+<!--pages/registerstudents/registerstudents.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <image class="avatar" src='{{userInfo.avatarUrl}}'></image>
+    <text class="nickname">{{userInfo.nickName}}</text>
+    <text>\n</text>
+    <text class="registerstudenttip">请输入您的注册信息(学生):</text>
+    <text>\n</text>
+    <input class="studentid" bindinput='studentidinput' placeholder="请输入学号" />
+    <text>\n</text>
+    <input class="studentname" bindinput='studentnameinput' placeholder="请输入姓名" />
+    <text>\n</text>
+    <input class="professionalclass" bindinput='studentprofessionalclassinput' placeholder="请输入专业班级" />
+  </view>
+
+    <button class="registerstudentsubmit" bindtap='registerstudentsubmit'>提 交</button>
+    <text>\n</text>
+    <button class="registerstudentreturn" bindtap='registerstudentreturn'>返 回</button>
+</view>

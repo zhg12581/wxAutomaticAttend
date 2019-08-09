@@ -1,0 +1,13 @@
+<!--pages/registers/registers.wxml-->
+<view class="container">
+  <view class="authorization">
+    <text>\n</text>
+    <text>\n</text>
+    <text class="authorizationfirst">您需先点击授权才能获取更多功能</text>
+    <text>\n</text>
+    <text>\n</text>
+    <text>\n</text>
+    <text>\n</text>
+    <button class="authorizationclick" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 授 权 </button>
+  </view>
+</view>

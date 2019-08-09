@@ -1,0 +1,13 @@
+<!--pages/afterregisterwait/afterregisterwait.wxml-->
+<view class="container">
+  <view class="TIP">
+    <text>\n</text>
+    <image class="avatar" src='{{userInfo.avatarUrl}}'></image>
+    <text class="nickname">{{userInfo.nickName}}</text>
+    <text>\n</text>
+    <text>\n</text>
+    <text class="tips">您的注册申请已经提交成功</text>
+    <text>\n</text>
+    <text class="tip">请耐心等待系统管理员的确认</text>
+  </view>
+</view>

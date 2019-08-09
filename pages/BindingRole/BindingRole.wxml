@@ -1,0 +1,47 @@
+<!--pages/BindingRole/BindingRole.wxml-->
+<view class="container">
+  <view class="chooserole">
+      <view class="studenttip" bindtap="studenttip" style="color:{{studenttipcolor}}">申请学生</view>
+      <view class="teachertip" bindtap="teachertip" style="color:{{teachertipcolor}}">申请老师</view>
+      <view class="admintip">申请管理员</view>
+  </view>
+  <scroll-view class="studentlist" scroll-y="true" scroll-top="{{top}}" hidden="{{studenthide}}">
+    <view class="item" wx:for="{{studentlist}}" wx:key="index">
+      <!--<text>课程编号:<view value="radio1"/></text>-->
+      <text>\n</text>
+      <view class="StudentId">学号:<view class="StudentId">{{item.StudentId}}</view></view>
+      <text class="kong">\n</text>
+      <view class="StudentName">姓名:<view class="StudentName">{{item.Name}}</view></view>
+      <text class="kong">\n</text>
+      <view class="ProfessionalClass">专业班级:<view class="ProfessionalClass">{{item.ProfessionalClass}}</view></view>
+      <text class="kong">\n</text>
+      <view class="buttons">
+      <button class="Confirm" id="{{item.StudentId}}" bindtap="ConfirmStudent">确 认</button>
+      <button class="Delete" id="{{item.StudentId}}" bindtap="DeleteStudent">删  除</button>
+      </view>
+      <text>\n</text>
+    </view>
+  </scroll-view>
+
+<scroll-view class="teacherlist" scroll-y="true" scroll-top="{{top}}" hidden="{{teacherhide}}">
+    <view class="item" wx:for="{{teacherlist}}" wx:key="index">
+      <!--<text>课程编号:<view value="radio1"/></text>-->
+      <text>\n</text>
+      <view class="TeacherId">编号:<view class="TeacherId">{{item.TeacherId}}</view></view>
+      <text class="kong">\n</text>
+      <view class="TeacherName">姓名:<view class="TeacherName">{{item.Name}}</view></view>
+      <text class="kong">\n</text>
+      <view class="Subject">教学科目:<view class="Subject">{{item.Subject}}</view></view>
+      <text class="kong">\n</text>
+      <view class="buttons">
+      <button class="Confirm" id="{{item.TeacherId}}" bindtap="ConfirmTeacher">确 认</button>
+      <button class="Delete" id="{{item.TeacherId}}" bindtap="DeleteTeacher">删  除</button>
+      </view>
+      <text>\n</text>
+    </view>
+  </scroll-view>
+
+  <button class="Return" bindtap="Return">返 回</button>
+</view>
+
+

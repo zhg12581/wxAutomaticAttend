@@ -1,0 +1,12 @@
+<!--pages/admins/ManageRoles/ManageRoles.wxml-->
+<view class="container">
+  <view class="ManageRoles">
+   <image style="width: 90px; height: 90px" class="RolesPhoto" src='/image/class.jpg'></image>
+    <text>\n</text>
+    <text>\n</text>
+    <button class="BindingRole" bindtap="BindingRole">绑定角色</button>
+    <text>\n</text>
+    <button class="DeletePerson" bindtap="DeletePerson">删除人员</button>
+  </view>
+</view>
+

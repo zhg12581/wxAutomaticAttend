@@ -1,0 +1,25 @@
+<!--pages/DeleteCourse/DeleteCourse.wxml-->
+<view class="container">
+  <scroll-view class="list" scroll-y="true" scroll-top="{{top}}">
+    <view class="item" wx:for="{{courselist}}" wx:key="index">
+      <!--<text>课程编号:<view value="radio1"/></text>-->
+      <text>\n</text>
+      <view class="Id">编号:<view class="CourseId">{{item.CourseId}}</view></view>
+      <text class="kong">\n</text>
+      <view class="Name">课程:<view class="CourseName">{{item.CourseName}}</view></view>
+      <text class="kong">\n</text>
+      <view class="Location">位置:<view class="CoursePlace">{{item.CoursePlace}}</view></view>
+      <text class="kong">\n</text>
+      <view class="Weekday">星期:<view class="WeekDay">{{item.WeekDay}}</view></view>
+      <text class="kong">\n</text>
+      <view class="Starttime">开始时间:<view class="StartTime">{{item.StartTime}}</view></view>
+      <text class="kong">\n</text>
+      <view class="Overtime">结束时间:<view class="OverTime">{{item.OverTime}}</view></view>
+      <text class="kong">\n</text>
+      <button class="Delete" id="{{item.CourseId}}" bindtap="Delete">删  除</button>
+      <text>\n</text>
+    </view>
+  </scroll-view>
+  <button class="Return" bindtap="Return">返 回</button>
+</view>
+

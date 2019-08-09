@@ -1,0 +1,143 @@
+/* pages/CreateCourse/CreateCourse.wxss */
+
+page {
+  background: rgb(248, 242, 242);
+  height: 100%;
+}
+
+.CreateCourseTip {
+  font-size: 24px;
+  font-weight: 3px;
+}
+
+.CourseMessage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 5%;
+}
+
+.courseid {
+  font-size: 17px;
+  width: 210px;
+  height: 29px;
+  border: solid 1px rgba(62, 76, 80, 0.726);
+}
+
+.coursename {
+  font-size: 17px;
+  width: 210px;
+  height: 29px;
+  border: solid 1px rgba(62, 76, 80, 0.726);
+}
+
+.courseplace {
+  font-size: 17px;
+  width: 210px;
+  height: 29px;
+  border: solid 1px rgba(62, 76, 80, 0.726);
+}
+
+.getlocation {
+  height: 40px;
+  font-size: 16px;
+  border: solid 1px rgba(62, 76, 80, 0.726);
+}
+
+.timetip {
+  font-weight: 2px;
+}
+
+
+.kong {
+  font-size: 6px;
+}
+
+
+
+.coursestarttime {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  top: 61%;
+}
+
+
+
+.coursestarthour {
+  width: 30px;
+  height: 30px;
+  border: solid 2px rgba(62, 76, 80, 0.726);
+  font-size: 20px;
+}
+
+.coursestartminute {
+  width: 30px;
+  height: 30px;
+  border: solid 2px rgba(62, 76, 80, 0.726);
+  font-size: 20px;
+}
+
+.coursestartsecond {
+  width: 30px;
+  height: 30px;
+  border: solid 2px rgba(62, 76, 80, 0.726);
+  font-size: 20px;
+}
+
+
+.courseovertime {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  top: 70%;
+}
+
+.courseoverhour {
+  width: 30px;
+  height: 30px;
+  border: solid 2px rgba(62, 76, 80, 0.726);
+  font-size: 20px;
+}
+
+.courseoverminute {
+  width: 30px;
+  height: 30px;
+  border: solid 2px rgba(62, 76, 80, 0.726);
+  font-size: 20px;
+}
+
+.courseoversecond {
+  width: 30px;
+  height: 30px;
+  border: solid 2px rgba(62, 76, 80, 0.726);
+  font-size: 20px;
+}
+
+
+.buttons {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  top: 85%;
+}
+
+.create {
+  width: 140px;
+  border: solid 1px rgba(62, 76, 80, 0.726);
+}
+
+.return {
+  width: 140px;
+  border: solid 1px rgba(62, 76, 80, 0.726);
+}
+
+.timeformat{
+  position:absolute;
+  top:78%;
+  color: #aaa;
+}

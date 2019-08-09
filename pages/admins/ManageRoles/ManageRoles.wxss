@@ -1,0 +1,27 @@
+/* pages/admins/ManageRoles/ManageRoles.wxss */
+page {
+  background: rgb(248, 242, 242);
+  height: 100%;
+}
+
+.ManageRoles {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 5%;
+}
+
+.BindingRole{
+  font-size: 20px;
+  width: 143px;
+  height: 50px;
+  border: solid 1px rgba(62, 76, 80, 0.726);
+}
+
+.DeletePerson{
+  font-size: 20px;
+  width: 143px;
+  height: 50px;
+  border: solid 1px rgba(62, 76, 80, 0.726);
+}
