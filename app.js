@@ -34,6 +34,7 @@ App({
     })
   },
   globalData: {
+    teachername:'',
     userInfo: null,
     list: [{
         "pagePath": "/pages/admins/ManageCourses/ManageCourses",

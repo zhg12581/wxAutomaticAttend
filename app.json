@@ -1,11 +1,13 @@
 {
   "pages": [
+    "pages/BindingTeacherStudent/BindingTeacherStudent",
+    "pages/BindingTeacherStudent/BindingStudentPage/BindingStudentPage",
+    "pages/admins/ManageCourses/ManageCourses",
     "pages/authorizationpage/authorizationpage",
     "pages/registers/registers",
     "pages/BindingRole/BindingRole",
     "pages/admins/ManageRoles/ManageRoles",
     "pages/DeleteCourse/DeleteCourse",
-    "pages/admins/ManageCourses/ManageCourses",
     "pages/CreateCourse/CreateCourse",
     "Componet/select/select",
     "pages/admins/mine/mine",

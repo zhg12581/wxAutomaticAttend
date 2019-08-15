@@ -66,7 +66,7 @@ page {
   top: 88%;
   border: solid 2px rgba(129, 148, 153, 0.726);
   font-size: 22px;
-  background-image: url('http://bpic.588ku.com//back_water_img/19/01/26/16bbe2823fae9676eca53868c141fd4d0c.jpg')
+  background-image: url('http://bpic.588ku.com//back_water_img/19/01/26/16bbe2823fae9676eca53868c141fd4d0c.jpg');
 }
 
 .buttons {
@@ -78,5 +78,5 @@ page {
 .Confirm, .Delete {
   width: 125px;
   border: solid 2px rgba(129, 148, 153, 0.726);
-   font-size: 18px;
+  font-size: 18px;
 }

@@ -1,0 +1,64 @@
+<!--pages/BindingTeacherStudent/BindingStudentPage/BindingStudentPage.wxml-->
+<view class="container">
+  <view class="tip">管理教师{{teachername}}的学生</view>
+  <view class="choosefunction">
+    <view class="bingstudenttip" bindtap="bindingstudent" style="color:{{bindingstudentcolor}}">绑定学生</view>
+    <view class="deleteteachertip" bindtap="deletestudent" style="color:{{deletestudentcolor}}">删除学生</view>
+  </view>
+  <view class="tr">
+    <view class="choose">选择</view>
+    <view class="th">学号</view>
+    <view class="th">姓名</view>
+    <view class="th">专业班级</view>
+  </view>
+  <!--  <block wx:for="{{list}}" wx:key="{{item.id}}">
+    <view class="cont">
+      <text>{{item.shopName}} {{item.price}}</text>
+      <text>{{item.guige}}</text>
+      <text>{{item.desc}}</text>
+    </view>
+  </block>
+-->
+
+  <scroll-view class="studentlist" scroll-y="true" scroll-top="{{top}}">
+    <view class="item" wx:for="{{studentlist}}" wx:key="index">
+      <checkbox-group bindchange="checkboxChange" id="{{item.StudentId}}">
+        <checkbox value="{{item.StudentId}}" checked="{{check}}" />
+      </checkbox-group>
+      <view class="id">{{item.StudentId}}</view>
+      <view class="name">{{item.Name}}</view>
+      <view class="profession">{{item.ProfessionalClass}}</view>
+    </view>
+  </scroll-view>
+  <view class="buttons1" hidden="{{Binding}}">
+    <button class="Binding" bindtap="Binding">绑 定</button>
+    <button class="Return1" bindtap="Return1">返 回</button>
+  </view>
+  <view class="buttons2" hidden="{{Delete}}">
+    <button class="Delete" bindtap="Delete">删 除</button>
+    <button class="Return2" bindtap="Return2">返 回</button>
+  </view>
+  
+
+
+  <!--
+    <view class='cont' wx:for="{listData}}" wx:key="{{item.code}}"> 
+      <checkbox-group bindchange="checkboxChange">
+          <checkbox color='#3B9EF5' />
+      </checkbox-group>
+      <text>{{item.code}}</text>
+      <text>{{item.text}}</text>
+    </view>
+    -->
+  <!--
+  <checkbox-group bindchange="checkboxChange" class="check">
+    <view class="tr" wx:for="{{listData}}" wx:key="">
+        <view class="td">
+        <checkbox value="{{item.code}}" checked="{{item.checked}}" />
+        </view>
+        <view class="td" value="{{item.text}}">{{item.code}}</view>
+        <view class="td" value="{{item.text}}">{{item.text}}</view>
+    </view>
+</checkbox-group>
+-->
+</view>
