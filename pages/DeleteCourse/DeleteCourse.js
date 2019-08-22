@@ -36,6 +36,7 @@ Page({
   },
 
 
+
   Return: function () {
     wx.switchTab({
       url: "/pages/admins/ManageCourses/ManageCourses"

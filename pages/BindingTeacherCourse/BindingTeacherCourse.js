@@ -1,4 +1,4 @@
-// pages/BindingTeacherStudent/BindingTeacherStudent.js
+// pages/BindingTeacherCourse/BindingTeacherCourse.js
 const app = getApp()
 Page({
 
@@ -33,20 +33,22 @@ Page({
   },
 
 
-  BingStudent: function (e) {
+  BindingCourse: function (e) {
     app.globalData.teachername = e.currentTarget.id;
     console.log(e.currentTarget.id)
     wx.redirectTo({
-      url:"/pages/BindingTeacherStudent/BindingStudentPage/BindingStudentPage"
+      url: "/pages/BindingTeacherCourse/BindingCoursePage/BindingCoursePage"
     })
   },
-
 
   Return: function (e) {
     wx.switchTab({
       url: "/pages/admins/ManageCourses/ManageCourses"
     })
   },
+
+
+  
 
   /**
    * 生命周期函数--监听页面初次渲染完成

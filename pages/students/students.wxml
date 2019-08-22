@@ -1,2 +1,50 @@
 <!--pages/students/students.wxml-->
-<text>pages/students/students.wxml</text>
+<view>
+  <cover-view class="tab-bar">
+    <cover-view class="tab-bar-border"></cover-view>
+    <cover-view wx:for="{{list}}" wx:key="index" class="tab-bar-item" bindtap="switchfunction" id="{{item.index}}">
+      <cover-image src="{{item.selectedimage}}"></cover-image>
+      <cover-view style="color: {{item.selectedcolor}}">{{item.text}}</cover-view>
+    </cover-view>
+  </cover-view>
+  <view class="ChooseCourse">
+    <view class="tip">欢迎来到选课界面</view>
+    <view class="choosefunction">
+      <view class="choosecoursetip" bindtap="choosecourse" style="color:{{choosecoursecolor}}">选择课程</view>
+      <view class="selectedcoursetip" bindtap="selectedcourse" style="color:{{selectedcoursecolor}}">选中课程</view>
+    </view>
+    <view class="tr">
+      <view class="choose">选择</view>
+      <view class="Id">ID</view>
+      <view class="coursemessage">课程信息</view>
+      <view class="courseteacher">教师</view>
+    </view>
+    <scroll-view class="courselist" scroll-y="true" scroll-top="{{top}}">
+      <view class="item" wx:for="{{courselist}}" wx:key="index">
+        <checkbox-group bindchange="checkboxChange" id="{{item.TeacherCourseId}}">
+          <checkbox class="CheckBox" value="{{item.TeacherCourseId}}" checked="{{check}}" />
+        </checkbox-group>
+        <view class="id">{{item.TeacherCourseId}}</view>
+        <view class="CourseMessage">
+          <view class="course">
+            <view class="CourseId">编号:{{item.CourseId}}</view>
+            <view class="CourseName">名称:{{item.CourseName}}</view>
+          </view>
+          <view class="course">
+            <view class="CoursePlace">地点:{{item.CoursePlace}}</view>
+            <view class="WeekDay">星期:{{item.WeekDay}}</view>
+          </view>
+          <view class="course">
+            <view class="StartTime">起止时间:{{item.StartTime}}-{{item.OverTime}}</view>
+          </view>
+        </view>
+        <view class="Teachername">{{item.Teachername}}</view>
+      </view>
+    </scroll-view>
+
+    <button class="submit" bindtap="Submit" hidden="{{Submit}}">提 交</button>
+    <button class="delete" bindtap="Delete" hidden="{{Delete}}">删 除</button>
+
+
+  </view>
+</view>

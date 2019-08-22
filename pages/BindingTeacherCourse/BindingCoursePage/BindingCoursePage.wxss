@@ -1,0 +1,114 @@
+/* pages/BindingTeacherCourse/BindingCoursePage/BindingCoursePage.wxss */
+
+page {
+  background: rgb(248, 242, 242);
+  height: 100%;
+}
+
+.tip {
+  position: absolute;
+  top: 0%;
+  border: 3rpx black solid;
+  width:750rpx;
+  height: 10%;
+  text-align: center;
+  line-height: 125rpx;
+  font-size: 21px;
+  background-image: url('http://bpic.588ku.com/back_pic/05/13/42/31599f7dd9f10d9.jpg!/fw/260/quality/90/unsharp/true/compress/true');
+}
+
+.choosefunction {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  top: 10.2%;
+}
+
+.bingcoursetip, .deletecoursetip {
+  border: 3rpx black solid;
+  width: 380rpx;
+  height: 115rpx;
+  text-align: center;
+  line-height: 125rpx;
+  font-size: 20px;
+  background-image: url('http://bpic.588ku.com/back_pic/05/13/42/31599f7dd9f10d9.jpg!/fw/260/quality/90/unsharp/true/compress/true');
+}
+
+.tr {
+  position: absolute;
+  top: 19%;
+  background-color: #dadada;
+  white-space: nowrap;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.choose {
+  width: 80rpx;
+  background-color: #e9e6bb;
+}
+
+.th {
+  background-color: #e4dc6c;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+}
+
+checkbox .wx-checkbox-input {
+  border-radius: 50%;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border: solid 2px rgba(129, 148, 153, 0.726);
+}
+
+
+.coursemessage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+}
+
+.course {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.CourseId, .CoursePlace, .StartTime {
+  width: 130px;
+}
+
+.courselist {
+  top: 23%;
+  height: 56%;
+  width: 100%;
+  position: absolute;
+  font-size: 16px;
+  border: solid 2px rgba(62, 76, 80, 0.726);
+}
+
+.buttons1, .buttons2 {
+  position: absolute;
+  top: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Binding, .Return1, .Delete, .Return2 {
+  width: 320rpx;
+  height: 115rpx;
+  border: solid 2px rgba(129, 148, 153, 0.726);
+  font-size: 20px;
+}

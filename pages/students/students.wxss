@@ -1,1 +1,190 @@
 /* pages/students/students.wxss */
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10%;
+  background: rgb(250, 246, 246);
+  display: flex;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.tab-bar-border {
+  background-color: rgba(0, 0, 0, 0.33);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1rpx;
+  transform: scaleY(0.5);
+}
+
+.tab-bar-item {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tab-bar-item cover-image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.tab-bar-item cover-view {
+  font-size: 10px;
+}
+
+.tip {
+  border: 3rpx black solid;
+  width:750rpx;
+  height: 120rpx;
+  text-align: center;
+  line-height: 125rpx;
+  font-size: 21px;
+  background-image: url('http://bpic.588ku.com/back_pic/05/13/42/31599f7dd9f10d9.jpg!/fw/260/quality/90/unsharp/true/compress/true');
+}
+
+.ChooseCourse{
+  display: flex;
+  flex-direction: column;
+}
+
+.choosefunction {
+  height: 110rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.choosecoursetip, .selectedcoursetip {
+  border: 3rpx black solid;
+  width: 373rpx;
+  height: 115rpx;
+  text-align: center;
+  line-height: 125rpx;
+  font-size: 20px;
+  background-image: url('http://bpic.588ku.com/back_pic/05/13/42/31599f7dd9f10d9.jpg!/fw/260/quality/90/unsharp/true/compress/true');
+}
+
+.tr {
+  top:18%;
+  position: absolute;
+  border: 3rpx black solid;
+  height: 4%;
+  background-color: #dadada;
+  white-space: nowrap;
+  width: 100%;
+  display: flex;
+  text-align: center;
+}
+
+.choose {
+  width: 80rpx;
+  background-color: #e9e6bb;
+}
+
+.Id {
+  width: 75rpx;
+  background-color: #acaba5;
+}
+
+.courselist {
+  top:22%;
+  position: absolute;
+  width: 100%;
+  height: 58%;
+  font-size: 30rpx;
+  border: solid 2px rgba(62, 76, 80, 0.726);
+}
+
+checkbox .wx-checkbox-input {
+  border-radius: 50%;
+}
+
+.coursemessage {
+  background-color: #e4dc6c;
+  text-align: center;
+  justify-content: center;
+  width: 477rpx;
+  border-bottom: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+}
+
+.courseteacher {
+  width: 118rpx;
+  background-color: #e9e6bb;
+}
+
+.item {
+  height:140rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border: solid 2px rgba(129, 148, 153, 0.726);
+}
+
+.CourseMessage {
+  font-size: 14px;
+  height: 143rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 495rpx;
+  border-left: solid 1px rgba(129, 148, 153, 0.726);
+  border-right: solid 1px rgba(129, 148, 153, 0.726);
+}
+
+.course {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.CourseId, .CoursePlace {
+  width: 130px;
+}
+
+.id {
+  width: 75rpx;
+  height: 143rpx;
+  border-left: solid 2px rgba(129, 148, 153, 0.726);
+  border-right: solid 1px rgba(129, 148, 153, 0.726);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.Teachername {
+  width: 123rpx;
+  height: 157rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border-left: solid 1px rgba(129, 148, 153, 0.726);
+}
+
+.submit{
+  position: absolute;
+  top:82%;
+  right: 230rpx;
+  width: 300rpx;
+  height: 90rpx;
+  border: solid 2px rgba(129, 148, 153, 0.726);
+  font-size: 40rpx;
+}
+
+.delete{
+  position: absolute;
+  top:83%;
+  right: 227rpx;
+  width: 300rpx;
+  height: 90rpx;
+  border: solid 2px rgba(129, 148, 153, 0.726);
+  font-size: 40rpx;
+}

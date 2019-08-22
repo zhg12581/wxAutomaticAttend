@@ -40,7 +40,9 @@ Page({
         "id": "6",
         "text": "周六"
       }
-    ]
+    ],
+
+
     /*
         selecthourtime: [{
             "id": "0",
@@ -309,7 +311,7 @@ Page({
 
 
 
-  Return: function () {
+  Return: function() {
     wx.switchTab({
       url: "/pages/admins/ManageCourses/ManageCourses"
     })
@@ -416,6 +418,7 @@ Page({
                       CourseId: that.data.courseid,
                       CourseName: that.data.coursename,
                       CoursePlace: that.data.courseplace,
+                      CourseNature: that.data.coursenature,
                       StartTime: that.data.starthour + ':' + that.data.startminute + ':' + that.data.startsecond,
                       OverTime: that.data.overhour + ':' + that.data.overminute + ':' + that.data.oversecond,
                       Longitude: Number(that.data.longitude),
@@ -458,6 +461,7 @@ Page({
                   duration: 1000
                 })
               }
+
             } else {
               wx.showToast({
                 title: '请选择星期',

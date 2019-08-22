@@ -1,46 +1,47 @@
 {
   "pages": [
+    "pages/authorizationpage/authorizationpage",
+    "pages/students/students",
+    "pages/BindingTeacherCourse/BindingCoursePage/BindingCoursePage",
+    "pages/DeleteCourse/DeleteCourse",
+    "pages/CreateCourse/CreateCourse",
+    "pages/registerstudents/registerstudents",
+    "pages/registerteachers/registerteachers",
+    "pages/BindingTeacherCourse/BindingTeacherCourse",
+    "pages/admins/ManageCourses/ManageCourses",
     "pages/BindingTeacherStudent/BindingTeacherStudent",
     "pages/BindingTeacherStudent/BindingStudentPage/BindingStudentPage",
-    "pages/admins/ManageCourses/ManageCourses",
-    "pages/authorizationpage/authorizationpage",
     "pages/registers/registers",
     "pages/BindingRole/BindingRole",
     "pages/admins/ManageRoles/ManageRoles",
-    "pages/DeleteCourse/DeleteCourse",
-    "pages/CreateCourse/CreateCourse",
     "Componet/select/select",
     "pages/admins/mine/mine",
-    "pages/registerteachers/registerteachers",
     "pages/afterregisterwait/afterregisterwait",
-    "pages/registerstudents/registerstudents",
-    "pages/students/students",
     "pages/teachers/teachers",
     "pages/admins/admins"
   ],
   "tabBar": {
-    "custom": true,
     "color": "#7A7E83",
     "selectedColor": "#3cc51f",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
-    "list": [
+    "list":[
       {
         "pagePath": "pages/admins/ManageCourses/ManageCourses",
-        "iconPath": "/image/233.jpg",
-        "selectedIconPath":"/image/233.jpg",
+        "iconPath": "/image/xuanke.png",
+        "selectedIconPath": "/image/xuankehl.png",
         "text": "管理课程"
       },
       {
         "pagePath": "pages/admins/ManageRoles/ManageRoles",
-        "iconPath": "/image/233.jpg",
-        "selectedIconPath": "/image/233.jpg",
+        "iconPath":"/image/mines.png",
+        "selectedIconPath": "/image/mineshl.png",
         "text": "管理角色"
       },
       {
         "pagePath": "pages/admins/mine/mine",
-        "iconPath": "/image/233.jpg",
-        "selectedIconPath": "/image/233.jpg",
+        "iconPath": "/image/mine.png",
+        "selectedIconPath": "/image/minehl.jpg",
         "text": "我的"
       }
     ]

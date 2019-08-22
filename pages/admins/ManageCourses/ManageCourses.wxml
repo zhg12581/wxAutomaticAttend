@@ -7,8 +7,10 @@
     <button class="CreateCourse" bindtap="CreateCourse">创建课程</button>
     <text>\n</text>
     <button class="DeleteCourse" bindtap="DeleteCourse">删除课程</button>
+    <!--<text>\n</text>
+    <button class="BingTeacherStudent" bindtap="BingTeacherStudent">绑定:教师—学生</button>-->
     <text>\n</text>
-    <button class="BingTeacherStudent" bindtap="BingTeacherStudent">绑定:教师—学生</button>
+    <button class="BingTeacherCourse" bindtap="BingTeacherCourse">绑定:教师—课程</button>
   </view>
 </view>
 

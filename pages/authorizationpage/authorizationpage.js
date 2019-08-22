@@ -15,69 +15,55 @@ Page({
     var that = this;
     app.globalData.userInfo = e.detail.userInfo
     if (e.detail.userInfo != undefined) {
-      wx.request({
-        url: 'http://localhost:51332/api/Login/PostLogin',
-        data: {
-          OpenId: app.globalData.userInfo.nickName,
-        },
-        header: {
-          //'content-type': 'application/json'
-          'Content-Type': 'application/x-www-form-urlencoded'
-          //'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8' 
-        },
-        method: "POST",
+      wx.login({
+        //获取code
         success: function(res) {
-          console.log(res.data.Message)
-          if (res.data.Message == "还没注册") {
-            wx.redirectTo({
-              url: '/pages/registers/registers',
-            })
-          } else if (res.data.Message == "角色待确认") {
-            wx.redirectTo({
-              url: '/pages/afterregisterwait/afterregisterwait',
-            })
-          } else {
-            if (res.data.Message == '学生') {
-              wx.redirectTo({
-                url: '/pages/students/students',
-              })
-            } else if (res.data.Message == '教师') {
-              wx.redirectTo({
-                url: '/pages/teachers/teachers',
-              })
-            } else {
-              /*
-              app.globalData.list = [{
-                "pagePath": "/pages/admins/ManageCourses/ManageCourses",
-                "iconPath": "/image/book.jpg",
-                "selectedIconPath": "/image/book.jpg",
-                "text": "管理课程"
-              },
-              {
-                "pagePath": "/pages/admins/ManageRoles/ManageRoles",
-                "iconPath": "/image/book.jpg",
-                "selectedIconPath": "/image/book.jpg",
-                "text": "管理角色"
-              },
-              {
-                "pagePath": "/pages/admins/ManageRoles/ManageRoles",
-                "iconPath": "/image/book.jpg",
-                "selectedIconPath": "/image/book.jpg",
-                "text": "管理角色"
+          var code = res.code; //返回code
+          console.log("code为:" + code);
+          wx.request({
+            url: 'http://localhost:51332/api/Login/PostLogin',
+            data: {
+              Code: code,
+            },
+            header: {
+              //'content-type': 'application/json'
+              'Content-Type': 'application/x-www-form-urlencoded'
+              //'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8' 
+            },
+            method: "POST",
+            success: function(res) {
+              console.log(res.data.Message)
+              if (res.data.Message == "还没注册") {
+                wx.redirectTo({
+                  url: '/pages/registers/registers',
+                })
+              } else if (res.data.Message == "角色待确认") {
+                wx.redirectTo({
+                  url: '/pages/afterregisterwait/afterregisterwait',
+                })
+              } else {
+                if (res.data.Message == '学生') {
+                  app.globalData.studentid = res.data.ID.toString();
+                  wx.redirectTo({
+                    url: '/pages/students/students',
+                  })
+                } else if (res.data.Message == '教师') {
+                  app.globalData.teacherid = res.data.ID;
+                  wx.redirectTo({
+                    url: '/pages/teachers/teachers',
+                  })
+                } else {
+                  wx.switchTab({
+                    url: "/pages/admins/ManageCourses/ManageCourses"
+                  })
+                }
+
               }
-              ]
-           */
-              wx.switchTab({
-                url: "/pages/admins/ManageCourses/ManageCourses"
-              })
             }
-
-          }
-
+          })
         }
 
       })
-
     } else {
       wx.showToast({
         title: '授权失败', //这里打印出登录成功

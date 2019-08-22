@@ -1,0 +1,25 @@
+<!--pages/BindingTeacherCourse/BindingTeacherCourse.wxml-->
+<view class="container">
+  <scroll-view class="confirmteacherlist" scroll-y="true" scroll-top="{{top}}">
+    <view class="item" wx:for="{{confirmteacherlist}}" wx:key="index">
+      <text>\n</text>
+      <view class="TeacherId">编号:
+        <view class="TeacherId">{{item.TeacherId}}</view>
+      </view>
+      <text class="kong">\n</text>
+      <view class="TeacherName">姓名:
+        <view class="TeacherName">{{item.Name}}</view>
+      </view>
+      <text class="kong">\n</text>
+      <view class="Subject">教学科目:
+        <view class="Subject">{{item.Subject}}</view>
+      </view>
+      <text class="kong">\n</text>
+      <view class="button">
+        <button class="ManageCourse" id="{{item.Name}}" bindtap="BindingCourse">管理其课程</button>
+      </view>
+      <text>\n</text>
+    </view>
+  </scroll-view>
+  <button class="Return" bindtap="Return">返 回</button>
+</view>

@@ -36,24 +36,10 @@ App({
   globalData: {
     teachername:'',
     userInfo: null,
-    list: [{
-        "pagePath": "/pages/admins/ManageCourses/ManageCourses",
-        "iconPath": "/image/book.jpg",
-        "selectedIconPath": "/image/bookhl.jpg",
-        "text": "管理课程"
-      },
-      {
-        "pagePath": "/pages/admins/ManageRoles/ManageRoles",
-        "iconPath": "/image/person.jpg",
-        "selectedIconPath": "/image/personhl.jpg",
-        "text": "管理角色"
-      },
-      {
-        "pagePath": "/pages/admins/mine/mine",
-        "iconPath": "/image/mine.png",
-        "selectedIconPath": "/image/minehl.jpg",
-        "text": "我的"
-      }
-    ]
+    studentid:"",
+    teacherid:""
+   
+
+
   }
 })

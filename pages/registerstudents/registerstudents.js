@@ -73,40 +73,47 @@ Page({
     if (that.data.studentid != '') {
       if (that.data.studentname != '') {
         if (that.data.studentprofessionalclass != '') {
-          wx.request({
-            url: 'http://localhost:51332/api/RegisterStudent/PostRegisterStudent',
-            data: {
-              OpenId: app.globalData.userInfo.nickName,
-              StudentId: that.data.studentid,
-              Name: that.data.studentname,
-              ProfessionalClass: that.data.studentprofessionalclass
-            },
-            header: {
-              //'content-type': 'application/json'
-              'Content-Type': 'application/x-www-form-urlencoded'
-              //'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8' 
-            },
-            method: "POST",
+          wx.login({
+            //获取code
             success: function(res) {
-              if (res.data.Message != "提交成功") {
-                wx.showToast({
-                  title: res.data.Message,
-                  icon: 'loading',
-                  duration: 1000
-                })
-              } else {
-                wx.showToast({
-                  title: res.data.Message,
-                  icon: 'success',
-                  duration: 1000
-                })
-                wx.redirectTo({
-                  url: '/pages/afterregisterwait/afterregisterwait',
-                })
-              }
+              var code = res.code; //返回code
+              console.log("code为:" + code);
+              wx.request({
+                url: 'http://localhost:51332/api/RegisterStudent/PostRegisterStudent',
+                data: {
+                  Code: code,
+                  StudentId: that.data.studentid,
+                  Name: that.data.studentname,
+                  ProfessionalClass: that.data.studentprofessionalclass
+                },
+                header: {
+                  //'content-type': 'application/json'
+                  'Content-Type': 'application/x-www-form-urlencoded'
+                  //'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8' 
+                },
+                method: "POST",
+                success: function(res) {
+                  if (res.data.Message != "提交成功") {
+                    wx.showToast({
+                      title: res.data.Message,
+                      icon: 'loading',
+                      duration: 1000
+                    })
+                  } else {
+                    wx.showToast({
+                      title: res.data.Message,
+                      icon: 'success',
+                      duration: 1000
+                    })
+                    wx.redirectTo({
+                      url: '/pages/afterregisterwait/afterregisterwait',
+                    })
+                  }
 
+                }
+
+              })
             }
-
           })
         } else {
           wx.showToast({

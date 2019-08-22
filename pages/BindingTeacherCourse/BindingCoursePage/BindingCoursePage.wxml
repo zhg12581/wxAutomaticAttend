@@ -1,0 +1,43 @@
+<!--pages/BindingTeacherCourse/BindingCoursePage/BindingCoursePage.wxml-->
+<view class="container">
+  <view class="tip">管理教师{{teachername}}的课程</view>
+  <view class="choosefunction">
+    <view class="bingcoursetip" bindtap="bingcourse" style="color:{{bingcoursecolor}}">绑定课程</view>
+    <view class="deletecoursetip" bindtap="deletecourse" style="color:{{deletecoursecolor}}">删除课程</view>
+  </view>
+  <view class="tr">
+    <view class="choose">选择</view>
+    <view class="th">课程信息</view>
+  </view>
+
+  <scroll-view class="courselist" scroll-y="true" scroll-top="{{top}}">
+    <view class="item" wx:for="{{courselist}}" wx:key="index">
+      <checkbox-group bindchange="checkboxChange" id="{{item.CourseId}}">
+        <checkbox class="CheckBox" value="{{item.CourseId}}" checked="{{check}}" />
+      </checkbox-group>
+      <view class="coursemessage">
+        <view class="course">
+          <view class="CourseId">编号:{{item.CourseId}}</view>
+          <view class="CourseName">名称:{{item.CourseName}}</view>
+        </view>
+        <view class="course">
+          <view class="CoursePlace">地点:{{item.CoursePlace}}</view>
+          <view class="WeekDay">星期:{{item.WeekDay}}</view>
+        </view>
+        <view class="course">
+          <view class="StartTime">开始:{{item.StartTime}}</view>
+          <view class="OverTime">结束:{{item.OverTime}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="buttons1" hidden="{{Binding}}">
+    <button class="Binding" bindtap="Binding">绑 定</button>
+    <button class="Return1" bindtap="Return1">返 回</button>
+  </view>
+  <view class="buttons2" hidden="{{Delete}}">
+    <button class="Delete" bindtap="Delete">删 除</button>
+    <button class="Return2" bindtap="Return2">返 回</button>
+  </view>
+
+</view>

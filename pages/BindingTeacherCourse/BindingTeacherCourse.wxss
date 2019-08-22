@@ -1,0 +1,58 @@
+/* pages/BindingTeacherCourse/BindingTeacherCourse.wxss */
+
+page {
+  background: rgb(248, 242, 242);
+  height: 100%;
+}
+
+.item {
+  border: solid 1px rgba(62, 76, 80, 0.726);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.TeacherId, .TeacherName, .Subject {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.confirmteacherlist {
+  top: 0%;
+  height: 439px;
+  width: 100%;
+  position: absolute;
+  border: solid 3px rgba(45, 198, 240, 0.726);
+  font-size: 21px;
+  background-image: url('http://ku.90sjimg.com/back_pic/04/15/60/235822e10809edb.jpg!/fw/304/quality/90/unsharp/true/compress/true/canvas/304x414/cvscolor/F6F6F600');
+}
+
+.kong {
+  font-size: 5px;
+}
+
+.Return {
+  position: absolute;
+  width: 100%;
+  top: 88%;
+  border: solid 2px rgba(129, 148, 153, 0.726);
+  font-size: 22px;
+  background-image: url('http://bpic.588ku.com//back_water_img/19/01/26/16bbe2823fae9676eca53868c141fd4d0c.jpg');
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.BingStudent, .DeleteStudent {
+  width: 125px;
+  border: solid 2px rgba(129, 148, 153, 0.726);
+  font-size: 18px;
+}
+
+.ManageCourse {
+  border: solid 1px rgba(62, 76, 80, 0.726);
+}
